@@ -7,25 +7,33 @@
           rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
     <title>Тест</title>
 </head>
 <body>
 <header>
-    <ul>
-        <li class="headerItem headerItem-logoAndName">
-            <img class="headerLogoImg" width="40" height="70" src=""/>
-            <div class="headerNameContainer">
-                <h1 class="headerLogoText h2">Логотип</h1>
-                <p class="headerName">Инжиринговая компания</p>
+    <ul class="header-list container d-flex align-items-center" >
+        <li class="header-item header-item-info d-flex">
+            <img class="logo"
+                 width="72"
+                 height="66"
+                 src="./images/Layer%205%20copy.png"
+                 alt="logo"/>
+            <div class="header-description mt-1">
+                <h1 class="header-description__logo h2">Логотип</h1>
+                <p class="header-description__name-company my-0">Инжиринговая компания</p>
             </div>
         </li>
-        <li class="headerItem headerItem-search">
-            <form class="search">
+        <li class="header-item header-item-search ms-auto">
+            <form class="search d-flex">
                 <input class="search__input"/>
                 <button class="search__button"/>
             </form>
         </li>
     </ul>
 </header>
+<div>
+  123
+</div>
 </body>
 </html>
