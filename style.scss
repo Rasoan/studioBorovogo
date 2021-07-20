@@ -1,3 +1,5 @@
+$orange: #f29700;
+
 .header-list {
   list-style: none !important;
 }
@@ -7,7 +9,5 @@
 }
 
 .search__button-icon {
-  color: #f29700;
+  color: $orange;
 }
-
-/*# sourceMappingURL=style.css.map */

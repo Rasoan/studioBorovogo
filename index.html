@@ -3,37 +3,41 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-          crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Тест</title>
 </head>
 <body>
 <header>
-    <ul class="header-list container d-flex align-items-center" >
-        <li class="header-item header-item-info d-flex">
+    <hr class="col-xs-12">
+    <ul class="header-list container d-flex align-items-center">
+        <li class="header-item header-item-info d-flex ms-4">
             <img class="logo"
                  width="72"
                  height="66"
                  src="./images/Layer%205%20copy.png"
                  alt="logo"/>
             <div class="header-description mt-1">
-                <h1 class="header-description__logo h2">Логотип</h1>
+                <h1 class="header-description__logo h2 fs-3 m-0">Логотип</h1>
                 <p class="header-description__name-company my-0">Инжиринговая компания</p>
             </div>
         </li>
         <li class="header-item header-item-search ms-auto">
             <form class="search d-flex">
-                <input class="search__input"/>
-                <button class="search__button"/>
+                <div class="search__input-wrapper position-relative">
+                    <input class="search__input pe-4"/>
+                    <button class="search__input-button position-absolute top-0 end-0 bg-transparent border-0">
+                        <i class="search__input-button-icon fas fa-search opacity-0.3"></i>
+                    </button>
+                </div>
+                <div class="search__icon ml-36 d-flex align-items-center ms-2">
+                    <i class="search__button-icon fas fa-search"></i>
+                </div>
             </form>
         </li>
     </ul>
+    <hr class="col-xs-12">
 </header>
-<div>
-  123
-</div>
+<script src="https://kit.fontawesome.com/8d912618a2.js" crossorigin="anonymous"></script>
 </body>
 </html>
