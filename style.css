@@ -3,7 +3,14 @@
 }
 
 .search__input-button-icon {
-  opacity: 0.3;
+  opacity: 0.9;
+}
+.search__input-button:hover {
+  background-color: #f29700 !important;
+  color: white;
+}
+.search__input-button:hover .search__input-button-icon {
+  opacity: 1;
 }
 
 .search__button-icon {

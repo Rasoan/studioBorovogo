@@ -1,13 +1,25 @@
-$orange: #f29700;
+$orangeColor: #f29700;
+$blueColor: #3c4148;
+$darkColor: #0e65b7;
+$whiteColor: white;
 
 .header-list {
   list-style: none !important;
 }
 
-.search__input-button-icon {
-  opacity: 0.3;
+.search__input-button {
+  &-icon {
+    opacity: 0.9;
+  }
+  &:hover {
+    background-color: $orangeColor !important;
+    color: $whiteColor;
+  }
+  &:hover &-icon {
+    opacity: 1;
+  }
 }
 
 .search__button-icon {
-  color: $orange;
+  color: $orangeColor;
 }
