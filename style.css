@@ -17,4 +17,17 @@
   color: #f29700;
 }
 
+.my-nav-link {
+  color: black;
+}
+.my-nav-link:hover {
+  background-color: #f29700;
+  color: white;
+}
+
+.my-active {
+  background-color: black !important;
+  color: white !important;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -2,6 +2,7 @@ $orangeColor: #f29700;
 $blueColor: #3c4148;
 $darkColor: #0e65b7;
 $whiteColor: white;
+$blackColor: black;
 
 .header-list {
   list-style: none !important;
@@ -22,4 +23,17 @@ $whiteColor: white;
 
 .search__button-icon {
   color: $orangeColor;
+}
+
+.my-nav-link {
+  color: $blackColor;
+  &:hover {
+    background-color: $orangeColor;
+    color: $whiteColor;
+  }
+}
+
+.my-active {
+  background-color: $blackColor !important;
+  color: $whiteColor !important;
 }
