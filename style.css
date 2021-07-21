@@ -39,4 +39,25 @@
   background-color: #f29700;
 }
 
+.wrapper-inscription {
+  background-color: #f29700;
+  width: max-content;
+  padding: 0 5px;
+}
+
+.wrapper-advantages-header {
+  width: 350px;
+}
+
+.advantages-header {
+  line-height: 0.9;
+}
+
+.my-carousel-caption {
+  top: 80px !important;
+  left: 140px !important;
+  width: 500px;
+  height: min-content;
+}
+
 /*# sourceMappingURL=style.css.map */
