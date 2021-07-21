@@ -33,7 +33,18 @@ $blackColor: black;
   }
 }
 
-.my-active {
+.my-nav-link.active {
   background-color: $blackColor !important;
   color: $whiteColor !important;
+}
+
+.carousel-indicators {
+  &__item {
+    width: 10px !important;
+    height: 10px !important;
+  }
+}
+
+.carousel-indicators__item.active {
+  background-color: $orangeColor;
 }

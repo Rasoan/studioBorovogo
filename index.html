@@ -16,7 +16,7 @@
             <img class="logo"
                  width="72"
                  height="66"
-                 src="./images/Layer%205%20copy.png"
+                 src="./images/logo.png"
                  alt="logo"/>
             <div class="header-description mt-1">
                 <h1 class="header-description__logo h2 fs-3 m-0">Логотип</h1>
@@ -38,9 +38,9 @@
         </li>
     </ul>
     <hr class="col-xs-12">
-    <ul class="nav nav-pills justify-content-center mb-3" id="pills-tab" role="tablist">
+    <ul class="nav nav-pills justify-content-center m-0" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link my-nav-link rounded-0 active my-active" id="pills-about-company-tab"
+            <button class="nav-link my-nav-link rounded-0" id="pills-about-company-tab"
                     data-bs-toggle="pill" data-bs-target="#pills-about-company" type="button" role="tab"
                     aria-controls="pills-about-company" aria-selected="true">
                 О компании
@@ -68,7 +68,7 @@
             </button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link my-nav-link rounded-0" id="pills-partners-tab" data-bs-toggle="pill"
+            <button class="nav-link my-nav-link active my-active rounded-0" id="pills-partners-tab" data-bs-toggle="pill"
                     data-bs-target="#pills-partners" type="button" role="tab" aria-controls="pills-partners"
                     aria-selected="false">
                 Партнёры
@@ -92,13 +92,46 @@
 </header>
 
 <div class="tab-content" id="pills-tabContent">
-    <div class="tab-pane fade show active" id="pills-about-company" role="tabpanel"
-         aria-labelledby="pills-about-company-tab">О компании
+    <div class="tab-pane fade" id="pills-about-company" role="tabpanel" aria-labelledby="pills-about-company-tab">
+        О компании
     </div>
     <div class="tab-pane fade" id="pills-services" role="tabpanel" aria-labelledby="pills-services-tab">Услуги</div>
     <div class="tab-pane fade" id="pills-objects" role="tabpanel" aria-labelledby="pills-objects-tab">Обьекты</div>
     <div class="tab-pane fade" id="pills-purchases" role="tabpanel" aria-labelledby="pills-purchases-tab">Закупки</div>
-    <div class="tab-pane fade" id="pills-partners" role="tabpanel" aria-labelledby="pills-partners-tab">Партнёры</div>
+    <div class="tab-pane fade show active" id="pills-partners" role="tabpanel" aria-labelledby="pills-partners-tab">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="carousel-indicators__item mx-2 active" aria-current="true" aria-label="Slide 0"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="carousel-indicators__item mx-2" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="carousel-indicators__item mx-2" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class="carousel-indicators__item mx-2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" class="carousel-indicators__item mx-2" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/aboutUs.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/3.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/4.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
     <div class="tab-pane fade" id="pills-news" role="tabpanel" aria-labelledby="pills-news-tab">Новости</div>
     <div class="tab-pane fade" id="pills-contacts" role="tabpanel" aria-labelledby="pills-contacts-tab">Контакты</div>
 </div>
@@ -107,22 +140,5 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/8d912618a2.js" crossorigin="anonymous"></script>
-<script>
-    const navLinks = document.querySelectorAll(".my-nav-link");
-
-    document.addEventListener("DOMContentLoaded", () => {
-        navLinks.forEach(element => {
-            element.addEventListener('click', onClickMyNav);
-        });
-    });
-
-    const onClickMyNav = event => {
-        navLinks.forEach(element => {
-            element.classList.remove("my-active");
-        });
-        event.target.classList.add("my-active");
-    }
-
-</script>
 </body>
 </html>
