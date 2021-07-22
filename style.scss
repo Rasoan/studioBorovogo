@@ -1,3 +1,4 @@
+@import "node_modules/bootstrap/scss/bootstrap";
 $orangeColor: #f29700;
 $blueColor: #3c4148;
 $darkColor: #0e65b7;
@@ -16,10 +17,12 @@ $blackColor: black;
   &-icon {
     opacity: 0.9;
   }
+
   &:hover {
     background-color: $orangeColor !important;
     color: $whiteColor;
   }
+
   &:hover &-icon {
     opacity: 1;
   }
@@ -31,6 +34,7 @@ $blackColor: black;
 
 .my-nav-link {
   color: $blackColor;
+
   &:hover {
     background-color: $orangeColor;
     color: $whiteColor;
@@ -73,3 +77,37 @@ $blackColor: black;
   width: 500px;
   height: min-content;
 }
+
+.list-company-opportunities__item {
+  &-content {
+    width: 196px;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+}
+@include media-breakpoint-up(md) {
+}
+@include media-breakpoint-up(lg) {
+  .list-company-opportunities__item {
+    &-content {
+      width: 150px;
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+}
+
+@include media-breakpoint-up(xxl) {
+}
+
+/*
+X-Small None: <576px (резиновая верстка).
+Small sm: 576p-767x (фиксированная верстка).
+Medium md: 768p-991x (фиксированная верстка).
+Large lg: 992-1199px (фиксированная верстка).
+Extra large	xl: 1200-1399px (фиксированная верстка).
+Extra extra large xxl: >1400px (фиксированная верстка).
+- На экранах с шириной разрешения 576px и более рабочая область страницы имеет фиксированную ширину, по горизонтали выравнивается по центру экрана.
+  */
+
