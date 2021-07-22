@@ -1,4 +1,5 @@
 @import "node_modules/bootstrap/scss/bootstrap";
+
 $orangeColor: #f29700;
 $blueColor: #3c4148;
 $darkColor: #0e65b7;
@@ -6,7 +7,9 @@ $whiteColor: white;
 $blackColor: black;
 
 .header-description__logo {
-   font-size: 1.8rem;
+  //font-size: 1.8rem;
+  font-size: calc(22px + 2 * (100vw / 1320));  // минимальный + (по макету - минимальный) * (100vw / ширина макета)
+  line-height: $line-height-lg;
 }
 
 .header-description__name-company {
@@ -21,7 +24,6 @@ $blackColor: black;
 .carousel__about-us-header {
   font-size: 2.8rem;
 }
-
 
 
 .carousel__about-us-description {
@@ -87,7 +89,7 @@ $blackColor: black;
 }
 
 .wrapper-advantages-header {
-  width: 350px
+  max-width: 350px
 }
 
 .advantages-header {
@@ -97,7 +99,7 @@ $blackColor: black;
 .my-carousel-caption {
   top: 80px !important;
   left: 140px !important;
-  width: 500px;
+  max-width: 500px;
   height: min-content;
 }
 
@@ -108,12 +110,15 @@ $blackColor: black;
 }
 
 
-
 @include media-breakpoint-up(sm) {
-
+  .header-description__logo {
+    line-height: 1;
+  }
 }
+
 @include media-breakpoint-up(md) {
 }
+
 @include media-breakpoint-up(lg) {
   .list-company-opportunities__item {
     &-content {
@@ -121,6 +126,7 @@ $blackColor: black;
     }
   }
 }
+
 @include media-breakpoint-up(xl) {
 }
 

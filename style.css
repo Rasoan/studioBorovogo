@@ -10747,7 +10747,8 @@ textarea.form-control-lg {
   }
 }
 .header-description__logo {
-  font-size: 1.8rem;
+  font-size: calc(22px + 2 * (100vw / 1320));
+  line-height: 2;
 }
 
 .header-description__name-company {
@@ -10819,7 +10820,7 @@ textarea.form-control-lg {
 }
 
 .wrapper-advantages-header {
-  width: 350px;
+  max-width: 350px;
 }
 
 .advantages-header {
@@ -10829,7 +10830,7 @@ textarea.form-control-lg {
 .my-carousel-caption {
   top: 80px !important;
   left: 140px !important;
-  width: 500px;
+  max-width: 500px;
   height: min-content;
 }
 
@@ -10837,6 +10838,11 @@ textarea.form-control-lg {
   width: 196px;
 }
 
+@media (min-width: 576px) {
+  .header-description__logo {
+    line-height: 1;
+  }
+}
 @media (min-width: 992px) {
   .list-company-opportunities__item-content {
     width: 150px;
