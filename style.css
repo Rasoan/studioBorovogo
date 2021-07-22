@@ -10746,6 +10746,27 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.header-description__logo {
+  font-size: 1.8rem;
+}
+
+.header-description__name-company {
+  font-size: 1.2rem;
+  line-height: 0.8;
+}
+
+.carousel__about-us-competence {
+  font-size: 1.3rem;
+}
+
+.carousel__about-us-header {
+  font-size: 2.8rem;
+}
+
+.carousel__about-us-description {
+  font-size: 1.2rem;
+}
+
 .header-list {
   list-style: none !important;
 }
