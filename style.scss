@@ -8,6 +8,10 @@ $blackColor: black;
   list-style: none !important;
 }
 
+.search {
+  width: max-content;
+}
+
 .search__input-button {
   &-icon {
     opacity: 0.9;

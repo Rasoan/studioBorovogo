@@ -10,6 +10,7 @@
 </head>
 <body>
 <header>
+    <!--
     <hr class="col-xs-12">
     <ul class="header-list container d-flex align-items-center">
         <li class="header-item header-item-info d-flex ms-4">
@@ -89,6 +90,96 @@
             </button>
         </li>
     </ul>
+    -->
+    <nav class="navbar navbar-expand-sm navbar-light d-block bg-light pb-0">
+        <div class="container-fluid">
+            <div class="navbar-brand header-item header-item-info d-flex ms-4">
+                <img class="logo"
+                     width="72"
+                     height="66"
+                     src="./images/logo.png"
+                     alt="logo"/>
+                <div class="header-description mt-1">
+                    <h1 class="header-description__logo h2 fs-3 m-0">Логотип</h1>
+                    <p class="header-description__name-company my-0">Инжиринговая компания</p>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target=".navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navbarSupportedContent flex-row-reverse">
+                <form class="search d-flex ms-auto ms-sm-0 me-1 me-sm-0">
+                    <div class="search__input-wrapper position-relative">
+                        <input class="search__input form-control pe-4" type="search" placeholder="Search"
+                               aria-label="Search"/>
+                        <button class="search__input-button position-absolute top-50 translate-middle-y end-0 bg-transparent border-0">
+                            <i class="search__input-button-icon fas fa-search opacity-0.3"></i>
+                        </button>
+                    </div>
+                    <div class="search__icon ml-36 d-flex align-items-center ms-2">
+                        <i class="search__button-icon fas fa-search"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse navbarSupportedContent justify-content-center">
+            <ul class="navbar-nav nav nav-pills justify-content-center m-0" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link my-nav-link w-100 rounded-0" id="pills-about-company-tab"
+                            data-bs-toggle="pill" data-bs-target="#pills-about-company" type="button" role="tab"
+                            aria-controls="pills-about-company" aria-selected="true">
+                        О компании
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link my-nav-link w-100 rounded-0" id="pills-services-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-services" type="button" role="tab" aria-controls="pills-services"
+                            aria-selected="false">
+                        Услуги
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link my-nav-link w-100 rounded-0" id="pills-objects-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-objects" type="button" role="tab" aria-controls="pills-objects"
+                            aria-selected="false">
+                        Объекты
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link my-nav-link w-100 rounded-0" id="pills-purchases-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-purchases" type="button" role="tab"
+                            aria-controls="pills-purchases"
+                            aria-selected="true">
+                        Закупки
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link my-nav-link w-100 active my-active rounded-0" id="pills-partners-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#pills-partners" type="button" role="tab" aria-controls="pills-partners"
+                            aria-selected="false">
+                        Партнёры
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link my-nav-link w-100 rounded-0" id="pills-news-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-news" type="button" role="tab" aria-controls="pills-news"
+                            aria-selected="false">
+                        Новости
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link my-nav-link w-100 rounded-0" id="pills-contacts-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-contacts" type="button" role="tab" aria-controls="pills-contacts"
+                            aria-selected="false">
+                        Контакты
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </header>
 
 <div class="tab-content" id="pills-tabContent">
@@ -101,11 +192,16 @@
     <div class="tab-pane fade show active" id="pills-partners" role="tabpanel" aria-labelledby="pills-partners-tab">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="carousel-indicators__item mx-2 active" aria-current="true" aria-label="Slide 0"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="carousel-indicators__item mx-2" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="carousel-indicators__item mx-2" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class="carousel-indicators__item mx-2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" class="carousel-indicators__item mx-2" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="carousel-indicators__item mx-2 active" aria-current="true" aria-label="Slide 0"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        class="carousel-indicators__item mx-2" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        class="carousel-indicators__item mx-2" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        class="carousel-indicators__item mx-2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                        class="carousel-indicators__item mx-2" aria-label="Slide 4"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -118,7 +214,8 @@
                             <h5 class="advantages-header h1 text-start lh-1">Объекты химической промышленности</h5>
                         </div>
 
-                        <p class="text-start">Важнейшим преимуществом компании является способность проектировать и строить «под ключ».
+                        <p class="text-start">Важнейшим преимуществом компании является способность проектировать и
+                            строить «под ключ».
                             При этом данные процессы ведутся одновременно,
                             что позволяет заказчику значительно сократить общий строительный цикл объекта.
                         </p>
@@ -137,10 +234,12 @@
                     <img src="images/4.png" class="d-block w-100" alt="...">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
@@ -148,25 +247,30 @@
     <div class="tab-pane fade" id="pills-news" role="tabpanel" aria-labelledby="pills-news-tab">Новости</div>
     <div class="tab-pane fade" id="pills-contacts" role="tabpanel" aria-labelledby="pills-contacts-tab">Контакты</div>
 </div>
-<div class="list-group flex-row">
-    <button type="button" class="list-group-item list-group-item-action  d-flex justify-content-center align-items-center py-4">
-        <img class="me-3" src="images/img2.png" alt="" />
+<div class="list-group flex-md-column flex-lg-row">
+    <button type="button"
+            class="list-group-item list-group-item-action  d-flex justify-content-center align-items-center py-4">
+        <img class="me-3" src="images/img2.png" alt=""/>
         <span class="lh-1">Услуги<br>проектирования</span>
     </button>
-    <button type="button" class="list-group-item list-group-item-action  d-flex justify-content-center align-items-center py-4">
-        <img class="me-3" src="images/img2.png" alt="" />
+    <button type="button"
+            class="list-group-item list-group-item-action  d-flex justify-content-center align-items-center py-4">
+        <img class="me-3" src="images/img2.png" alt=""/>
         <span class="lh-1">Строиельно-<br>монтажные работы</span>
     </button>
-    <button type="button" class="list-group-item list-group-item-action  d-flex justify-content-center align-items-center py-4">
-        <img class="me-3" src="images/img3.png" alt="" />
+    <button type="button"
+            class="list-group-item list-group-item-action  d-flex justify-content-center align-items-center py-4">
+        <img class="me-3" src="images/img3.png" alt=""/>
         <span class="lh-1">Экспертная<br>деятельность</span>
     </button>
-    <button type="button" class="list-group-item list-group-item-action  d-flex justify-content-center align-items-center py-4">
-        <img class="me-3" src="images/img4.png" alt="" />
+    <button type="button"
+            class="list-group-item list-group-item-action  d-flex justify-content-center align-items-center py-4">
+        <img class="me-3" src="images/img4.png" alt=""/>
         <span class="lh-1">Техническое<br>обслуживание</span>
     </button>
-    <button type="button" class="list-group-item list-group-item-action  d-flex justify-content-center align-items-center py-4">
-        <img class="me-3" src="images/img5.png" alt="" />
+    <button type="button"
+            class="list-group-item list-group-item-action  d-flex justify-content-center align-items-center py-4">
+        <img class="me-3" src="images/img5.png" alt=""/>
         <span class="lh-1">Испытательная<br>работа</span>
     </button>
 </div>
