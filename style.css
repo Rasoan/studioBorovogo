@@ -10746,14 +10746,40 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.header-description__logo {
-  font-size: calc(22px + 2 * (100vw / 1320));
-  line-height: 2;
+@media (max-width: 767.98px) {
+  .header-description__logo {
+    font-size: calc(18px + 10.2 * ((100vw - 320px) / 1400));
+  }
+}
+@media (min-width: 768px) {
+  .header-description__logo {
+    font-size: calc(18px + 6 * (100vw / 1400));
+  }
 }
 
 .header-description__name-company {
-  font-size: 1.2rem;
   line-height: 0.8;
+}
+@media (max-width: 767.98px) {
+  .header-description__name-company {
+    font-size: calc(10px + 3.4 * ((100vw - 320px) / 1400));
+  }
+}
+@media (min-width: 768px) {
+  .header-description__name-company {
+    font-size: calc(10px + 2 * (100vw / 1400));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .my-nav-link {
+    font-size: calc(12px + 6.8 * ((100vw - 320px) / 1400));
+  }
+}
+@media (min-width: 768px) {
+  .my-nav-link {
+    font-size: calc(12px + 4 * (100vw / 1400));
+  }
 }
 
 .carousel__about-us-competence {
@@ -10775,9 +10801,28 @@ textarea.form-control-lg {
 .search {
   width: max-content;
 }
-
+@media (max-width: 767.98px) {
+  .search__input {
+    font-size: calc(10px + 10.2 * ((100vw - 320px) / 1400));
+  }
+}
+@media (min-width: 768px) {
+  .search__input {
+    font-size: calc(10px + 6 * (100vw / 1400));
+  }
+}
 .search__input-button-icon {
   opacity: 0.9;
+}
+@media (max-width: 767.98px) {
+  .search__input-button-icon {
+    font-size: calc(14px + 3.4 * ((100vw - 320px) / 1400));
+  }
+}
+@media (min-width: 768px) {
+  .search__input-button-icon {
+    font-size: calc(14px + 2 * (100vw / 1400));
+  }
 }
 .search__input-button:hover {
   background-color: #f29700 !important;
@@ -10785,6 +10830,16 @@ textarea.form-control-lg {
 }
 .search__input-button:hover .search__input-button-icon {
   opacity: 1;
+}
+@media (max-width: 767.98px) {
+  .search__button-icon {
+    font-size: calc(10px + 10.2 * ((100vw - 320px) / 1400));
+  }
+}
+@media (min-width: 768px) {
+  .search__button-icon {
+    font-size: calc(10px + 6 * (100vw / 1400));
+  }
 }
 
 .search__button-icon {
@@ -10838,6 +10893,25 @@ textarea.form-control-lg {
   width: 196px;
 }
 
+.my-hr {
+  width: 100%;
+}
+
+@media (max-width: 575.98px) {
+  .search__input {
+    width: 9rem;
+    height: 1.8rem;
+  }
+  .search__input-button-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .my-navbar-toggler-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+}
 @media (min-width: 576px) {
   .header-description__logo {
     line-height: 1;

@@ -12,27 +12,29 @@
 <div class="container-xxl p-0">
     <header>
         <nav class="navbar navbar-expand-sm navbar-light d-block bg-light pb-0">
-            <div class="container-fluid">
-                <div class="navbar-brand header-item header-item-info d-flex ms-4">
-                    <img class="logo d-none d-sm-block"
-                         width="72"
-                         height="66"
-                         src="./images/logo.png"
-                         alt="logo"/>
-                    <div class="header-description mt-1">
-                        <h1 class="header-description__logo m-0">Логотип</h1>
-                        <p class="header-description__name-company my-0 d-none d-sm-block">Инжиринговая компания</p>
+            <div class="container-fluid my-4">
+                <div class="container d-flex p-0">
+                    <div class="header-item d-flex ms-1 ms-sm-4">
+                        <img class="logo d-none d-sm-block"
+                             width="72"
+                             height="66"
+                             src="./images/logo.png"
+                             alt="logo"/>
+                        <div class="header-description d-flex flex-column justify-content-center">
+                            <h1 class="header-description__logo m-0">Логотип</h1>
+                            <p class="header-description__name-company my-0">Инжиринговая компания</p>
+                        </div>
                     </div>
+                    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                            data-bs-target=".navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="my-navbar-toggler-icon navbar-toggler-icon"></span>
+                    </button>
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target=".navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <div class="collapse navbar-collapse navbarSupportedContent flex-row-reverse">
-                    <form class="search d-flex ms-auto ms-sm-0 me-1 me-sm-0">
+                    <form class="search d-flex ms-auto ms-sm-0 me-1 me-sm-0 mt-4 mt-sm-0">
                         <div class="search__input-wrapper position-relative">
-                            <input class="search__input form-control pe-4" type="search" placeholder="Search"
+                            <input class="search__input form-control pe-4" type="search" placeholder="Поиск"
                                    aria-label="Search"/>
                             <button class="search__input-button position-absolute top-50 translate-middle-y end-0 bg-transparent border-0">
                                 <i class="search__input-button-icon fas fa-search opacity-0.3"></i>
@@ -42,9 +44,11 @@
                             <i class="search__button-icon fas fa-search"></i>
                         </div>
                     </form>
+
                 </div>
             </div>
-            <div class="collapse navbar-collapse navbarSupportedContent justify-content-center">
+            <div class="collapse navbar-collapse navbarSupportedContent justify-content-center flex-column">
+                <hr class="my-hr col-xs-12 m-0">
                 <ul class="navbar-nav nav nav-pills justify-content-center m-0" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link my-nav-link w-100 rounded-0" id="pills-about-company-tab"
@@ -149,20 +153,20 @@
                             </p>
                         </div>
                     </div>
-<!--
-                    <div class="carousel-item">
-                        <img src="images/1.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/2.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/3.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/4.png" class="d-block w-100" alt="...">
-                    </div>
--->
+                    <!--
+                                        <div class="carousel-item">
+                                            <img src="images/1.png" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/2.png" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/3.png" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/4.png" class="d-block w-100" alt="...">
+                                        </div>
+                    -->
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                         data-bs-slide="prev">

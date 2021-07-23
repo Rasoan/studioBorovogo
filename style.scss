@@ -5,16 +5,31 @@ $blueColor: #3c4148;
 $darkColor: #0e65b7;
 $whiteColor: white;
 $blackColor: black;
+$maxWidthNumber: 1400; // максимальная ширина макета
+$minWidthNumber: 320;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+  @include media-breakpoint-down(md) {
+    font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - #{$minWidthNumber + px}) / #{$maxWidthNumber}));
+  }
+  @include media-breakpoint-up(md) {
+    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidthNumber}));
+  }
+}
 
 .header-description__logo {
-  //font-size: 1.8rem;
-  font-size: calc(22px + 2 * (100vw / 1320));  // минимальный + (по макету - минимальный) * (100vw / ширина макета)
-  line-height: $line-height-lg;
+  @include adaptiv-font(24, 18);
 }
 
 .header-description__name-company {
-  font-size: 1.2rem;
+  @include adaptiv-font(12, 10);
   line-height: 0.8;
+}
+
+.my-nav-link {
+  @include adaptiv-font(16, 12);
 }
 
 .carousel__about-us-competence {
@@ -36,22 +51,32 @@ $blackColor: black;
 
 .search {
   width: max-content;
+
+  &__input {
+    @include adaptiv-font(16, 10);
+  }
+
+  &__input-button {
+    &-icon {
+      opacity: 0.9;
+      @include adaptiv-font(16, 14);
+    }
+
+    &:hover {
+      background-color: $orangeColor !important;
+      color: $whiteColor;
+    }
+
+    &:hover &-icon {
+      opacity: 1;
+    }
+  }
+
+  &__button-icon {
+    @include adaptiv-font(16, 10);
+  }
 }
 
-.search__input-button {
-  &-icon {
-    opacity: 0.9;
-  }
-
-  &:hover {
-    background-color: $orangeColor !important;
-    color: $whiteColor;
-  }
-
-  &:hover &-icon {
-    opacity: 1;
-  }
-}
 
 .search__button-icon {
   color: $orangeColor;
@@ -109,6 +134,26 @@ $blackColor: black;
   }
 }
 
+.my-hr {
+  width: 100%;
+}
+
+@include media-breakpoint-down(sm) {
+  .search__input {
+    width: 9rem;
+    height: 1.8rem;
+
+    &-button-icon {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  .my-navbar-toggler-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+}
 
 @include media-breakpoint-up(sm) {
   .header-description__logo {
