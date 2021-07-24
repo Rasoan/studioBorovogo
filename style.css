@@ -10746,182 +10746,272 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+html {
+  overflow: scroll;
+}
+
 @media (max-width: 767.98px) {
-  .header-description__logo {
+  .brand-information__description-logo {
     font-size: calc(18px + 10.2 * ((100vw - 320px) / 1400));
   }
 }
 @media (min-width: 768px) {
-  .header-description__logo {
+  .brand-information__description-logo {
     font-size: calc(18px + 6 * (100vw / 1400));
   }
 }
-
-.header-description__name-company {
+.brand-information__description-name {
   line-height: 0.8;
 }
 @media (max-width: 767.98px) {
-  .header-description__name-company {
+  .brand-information__description-name {
     font-size: calc(10px + 3.4 * ((100vw - 320px) / 1400));
   }
 }
 @media (min-width: 768px) {
-  .header-description__name-company {
+  .brand-information__description-name {
     font-size: calc(10px + 2 * (100vw / 1400));
   }
 }
 
+.my-search {
+  width: max-content;
+}
 @media (max-width: 767.98px) {
-  .my-nav-link {
+  .my-search__input {
     font-size: calc(12px + 6.8 * ((100vw - 320px) / 1400));
   }
 }
 @media (min-width: 768px) {
-  .my-nav-link {
+  .my-search__input {
     font-size: calc(12px + 4 * (100vw / 1400));
   }
 }
-
-.carousel__about-us-competence {
-  font-size: 1.3rem;
-}
-
-.carousel__about-us-header {
-  font-size: 2.8rem;
-}
-
-.carousel__about-us-description {
-  font-size: 1.2rem;
-}
-
-.header-list {
-  list-style: none !important;
-}
-
-.search {
-  width: max-content;
-}
-@media (max-width: 767.98px) {
-  .search__input {
-    font-size: calc(10px + 10.2 * ((100vw - 320px) / 1400));
+@media (max-width: 575.98px) {
+  .my-search__input {
+    max-width: 18em;
+    max-height: 3em;
   }
 }
-@media (min-width: 768px) {
-  .search__input {
-    font-size: calc(10px + 6 * (100vw / 1400));
-  }
-}
-.search__input-button-icon {
+.my-search__button-icon {
   opacity: 0.9;
 }
 @media (max-width: 767.98px) {
-  .search__input-button-icon {
+  .my-search__button-icon {
     font-size: calc(14px + 3.4 * ((100vw - 320px) / 1400));
   }
 }
 @media (min-width: 768px) {
-  .search__input-button-icon {
+  .my-search__button-icon {
     font-size: calc(14px + 2 * (100vw / 1400));
   }
 }
-.search__input-button:hover {
+@media (max-width: 575.98px) {
+  .my-search__button-icon {
+    max-width: 1em;
+    max-height: 1em;
+  }
+}
+.my-search__button:hover {
   background-color: #f29700 !important;
   color: white;
 }
-.search__input-button:hover .search__input-button-icon {
+.my-search__button:hover .my-search__button-icon {
   opacity: 1;
 }
+.my-search__icon {
+  color: #f29700;
+}
 @media (max-width: 767.98px) {
-  .search__button-icon {
+  .my-search__icon {
     font-size: calc(10px + 10.2 * ((100vw - 320px) / 1400));
   }
 }
 @media (min-width: 768px) {
-  .search__button-icon {
+  .my-search__icon {
     font-size: calc(10px + 6 * (100vw / 1400));
   }
 }
-
-.search__button-icon {
-  color: #f29700;
+@media (max-width: 575.98px) {
+  .my-search__icon {
+    max-width: 0.8em;
+    max-height: 0.8em;
+  }
 }
 
-.my-nav-link {
-  color: black;
-}
-.my-nav-link:hover {
-  background-color: #f29700;
-  color: white;
-}
-
-.my-nav-link.active {
-  background-color: black !important;
-  color: white !important;
-}
-
-.carousel-indicators__item {
-  width: 10px !important;
-  height: 10px !important;
-}
-
-.carousel-indicators__item.active {
-  background-color: #f29700;
-}
-
-.wrapper-inscription {
-  background-color: #f29700;
-  width: max-content;
-  padding: 0 5px;
-}
-
-.wrapper-advantages-header {
-  max-width: 350px;
-}
-
-.advantages-header {
-  line-height: 0.9;
-}
-
-.my-carousel-caption {
-  top: 80px !important;
-  left: 140px !important;
-  max-width: 500px;
-  height: min-content;
-}
-
-.list-company-opportunities__item-content {
-  width: 196px;
+@media (max-width: 575.98px) {
+  .my-navbar-toggler__icon {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
 }
 
 .my-hr {
   width: 100%;
 }
 
-@media (max-width: 575.98px) {
-  .search__input {
-    width: 9rem;
-    height: 1.8rem;
+.my-navbar__item-link {
+  font-weight: bold;
+  color: black;
+}
+@media (max-width: 767.98px) {
+  .my-navbar__item-link {
+    font-size: calc(12px + 6.8 * ((100vw - 320px) / 1400));
   }
-  .search__input-button-icon {
-    width: 1rem;
-    height: 1rem;
+}
+@media (min-width: 768px) {
+  .my-navbar__item-link {
+    font-size: calc(12px + 4 * (100vw / 1400));
   }
+}
+.my-navbar__item-link:hover {
+  background-color: #f29700;
+  color: white !important;
+}
+.my-navbar__item-link.active {
+  background-color: black !important;
+  color: white !important;
+}
 
-  .my-navbar-toggler-icon {
-    width: 1.1rem;
-    height: 1.1rem;
+@media (max-width: 575.98px) {
+  .my-carousel-indicators {
+    margin-bottom: 0;
   }
 }
-@media (min-width: 576px) {
-  .header-description__logo {
-    line-height: 1;
+.my-carousel-indicators__item {
+  width: 10px !important;
+  height: 10px !important;
+}
+@media (max-width: 575.98px) {
+  .my-carousel-indicators__item {
+    width: 0.8em !important;
+    height: 0.8em !important;
+    border-bottom: 0.5em solid transparent !important;
   }
 }
-@media (min-width: 992px) {
-  .list-company-opportunities__item-content {
-    width: 150px;
+@media (max-width: 575.98px) and (max-width: 767.98px) {
+  .my-carousel-indicators__item {
+    font-size: calc(12px + 6.8 * ((100vw - 320px) / 1400));
   }
 }
+@media (max-width: 575.98px) and (min-width: 768px) {
+  .my-carousel-indicators__item {
+    font-size: calc(12px + 4 * (100vw / 1400));
+  }
+}
+.my-carousel-indicators__item.active {
+  background-color: #f29700;
+}
+
+.about-company {
+  max-width: 500px;
+  height: min-content;
+  top: 80px;
+  left: 140px;
+}
+@media (max-width: 1199.98px) {
+  .about-company {
+    top: 60px;
+    left: 110px;
+  }
+}
+@media (max-width: 991.98px) {
+  .about-company {
+    top: 40px;
+    left: 60px;
+  }
+}
+@media (max-width: 767.98px) {
+  .about-company {
+    top: 15px;
+    left: 35px;
+  }
+}
+@media (max-width: 575.98px) {
+  .about-company {
+    top: 2px;
+    left: 4px;
+  }
+}
+.about-company__competence-wrapper {
+  width: max-content;
+  background-color: #f29700;
+  padding: 0.5em;
+}
+@media (max-width: 500px) {
+  .about-company__competence-wrapper {
+    padding: 0 0.7em;
+  }
+}
+.about-company__competence {
+  font-weight: bold;
+}
+.about-company__header {
+  line-height: 0.8em;
+}
+@media (max-width: 767.98px) {
+  .about-company__header {
+    font-size: calc(15px + 76.5 * ((100vw - 320px) / 1400));
+  }
+}
+@media (min-width: 768px) {
+  .about-company__header {
+    font-size: calc(15px + 45 * (100vw / 1400));
+  }
+}
+@media (max-width: 300px) {
+  .about-company__description {
+    display: none;
+  }
+}
+.about-company__competence, .about-company__description, .about-company__header {
+  line-height: 1.3em;
+}
+@media (max-width: 767.98px) {
+  .about-company__competence, .about-company__description, .about-company__header {
+    font-size: calc(12px + 5.1 * ((100vw - 320px) / 1400));
+  }
+}
+@media (min-width: 768px) {
+  .about-company__competence, .about-company__description, .about-company__header {
+    font-size: calc(12px + 3 * (100vw / 1400));
+  }
+}
+@media (max-width: 500px) {
+  .about-company__competence, .about-company__description, .about-company__header {
+    line-height: 0.8em;
+  }
+}
+
+.list-of-company-opportunities__item-img {
+  object-fit: contain;
+  width: 2em;
+  height: 2.3em;
+}
+@media (max-width: 767.98px) {
+  .list-of-company-opportunities__item-img {
+    font-size: calc(10px + 5.1 * ((100vw - 320px) / 1400));
+  }
+}
+@media (min-width: 768px) {
+  .list-of-company-opportunities__item-img {
+    font-size: calc(10px + 3 * (100vw / 1400));
+  }
+}
+.list-of-company-opportunities__item-description {
+  max-width: 10em;
+}
+@media (max-width: 767.98px) {
+  .list-of-company-opportunities__item-description {
+    font-size: calc(10px + 5.1 * ((100vw - 320px) / 1400));
+  }
+}
+@media (min-width: 768px) {
+  .list-of-company-opportunities__item-description {
+    font-size: calc(10px + 3 * (100vw / 1400));
+  }
+}
+
 /*
 X-Small None: <576px (резиновая верстка).
 Small sm: 576p-767x (фиксированная верстка).

@@ -6,7 +6,7 @@ $darkColor: #0e65b7;
 $whiteColor: white;
 $blackColor: black;
 $maxWidthNumber: 1400; // максимальная ширина макета
-$minWidthNumber: 320;
+$minWidthNumber: 320; // минимальная фиксировання ширина макета, дальше резина
 
 @mixin adaptiv-font($pcSize, $mobSize) {
   $addSize: $pcSize - $mobSize;
@@ -19,47 +19,42 @@ $minWidthNumber: 320;
   }
 }
 
-.header-description__logo {
-  @include adaptiv-font(24, 18);
+html {
+  overflow: scroll;
 }
 
-.header-description__name-company {
-  @include adaptiv-font(12, 10);
-  line-height: 0.8;
+.brand-information {
+  &__description {
+    &-logo {
+      @include adaptiv-font(24, 18);
+    }
+
+    &-name {
+      @include adaptiv-font(12, 10);
+      line-height: 0.8;
+    }
+  }
 }
 
-.my-nav-link {
-  @include adaptiv-font(16, 12);
-}
-
-.carousel__about-us-competence {
-  font-size: 1.3rem;
-}
-
-.carousel__about-us-header {
-  font-size: 2.8rem;
-}
-
-
-.carousel__about-us-description {
-  font-size: 1.2rem;
-}
-
-.header-list {
-  list-style: none !important;
-}
-
-.search {
+.my-search {
   width: max-content;
 
   &__input {
-    @include adaptiv-font(16, 10);
+    @include adaptiv-font(16, 12);
+    @include media-breakpoint-down(sm) { // <= 576
+      max-width: 18em;
+      max-height: 3em;
+    }
   }
 
-  &__input-button {
+  &__button {
     &-icon {
       opacity: 0.9;
       @include adaptiv-font(16, 14);
+      @include media-breakpoint-down(sm) { // <= 576
+        max-width: 1em;
+        max-height: 1em;
+      }
     }
 
     &:hover {
@@ -72,65 +67,22 @@ $minWidthNumber: 320;
     }
   }
 
-  &__button-icon {
+  &__icon {
+    color: $orangeColor;
     @include adaptiv-font(16, 10);
+    @include media-breakpoint-down(sm) { // <= 576
+      max-width: 0.8em;
+      max-height: 0.8em;
+    }
   }
 }
 
-
-.search__button-icon {
-  color: $orangeColor;
-}
-
-.my-nav-link {
-  color: $blackColor;
-
-  &:hover {
-    background-color: $orangeColor;
-    color: $whiteColor;
-  }
-}
-
-.my-nav-link.active {
-  background-color: $blackColor !important;
-  color: $whiteColor !important;
-}
-
-.carousel-indicators {
-  &__item {
-    width: 10px !important;
-    height: 10px !important;
-  }
-}
-
-.carousel-indicators__item.active {
-  background-color: $orangeColor;
-}
-
-.wrapper-inscription {
-  background-color: $orangeColor;
-  width: max-content;
-  padding: 0 5px;
-}
-
-.wrapper-advantages-header {
-  max-width: 350px
-}
-
-.advantages-header {
-  line-height: 0.9;
-}
-
-.my-carousel-caption {
-  top: 80px !important;
-  left: 140px !important;
-  max-width: 500px;
-  height: min-content;
-}
-
-.list-company-opportunities__item {
-  &-content {
-    width: 196px;
+.my-navbar-toggler {
+  &__icon {
+    @include media-breakpoint-down(sm) { // <= 576
+      width: 1.1rem;
+      height: 1.1rem;
+    }
   }
 }
 
@@ -138,44 +90,133 @@ $minWidthNumber: 320;
   width: 100%;
 }
 
-@include media-breakpoint-down(sm) {
-  .search__input {
-    width: 9rem;
-    height: 1.8rem;
+.my-navbar {
+  &__item {
+    &-link {
+      font-weight: bold;
+      color: $blackColor;
+      @include adaptiv-font(16, 12);
 
-    &-button-icon {
-      width: 1rem;
-      height: 1rem;
-    }
-  }
+      &:hover {
+        background-color: $orangeColor;
+        color: $whiteColor !important;
+      }
 
-  .my-navbar-toggler-icon {
-    width: 1.1rem;
-    height: 1.1rem;
-  }
-}
-
-@include media-breakpoint-up(sm) {
-  .header-description__logo {
-    line-height: 1;
-  }
-}
-
-@include media-breakpoint-up(md) {
-}
-
-@include media-breakpoint-up(lg) {
-  .list-company-opportunities__item {
-    &-content {
-      width: 150px;
+      &.active {
+        background-color: $blackColor !important;
+        color: $whiteColor !important;
+      }
     }
   }
 }
 
-@include media-breakpoint-up(xl) {
+.my-carousel-indicators {
+  @include media-breakpoint-down(sm) { // <= 576
+    margin-bottom: 0;
+  }
+
+  &__item {
+    width: 10px !important;
+    height: 10px !important;
+    @include media-breakpoint-down(sm) { // <= 576
+      @include adaptiv-font(16, 12);
+      width: 0.8em !important;
+      height: 0.8em !important;
+      border-bottom: 0.5em solid transparent !important;
+    }
+
+    &.active {
+      background-color: $orangeColor;
+    }
+  }
 }
 
-@include media-breakpoint-up(xxl) {
+.about-company {
+  max-width: 500px;
+  height: min-content;
+  top: 80px;
+  left: 140px;
+  @include media-breakpoint-down(xl) { // <=1200
+    top: 60px;
+    left: 110px;
+  }
+  @include media-breakpoint-down(lg) { // <= 992
+    top: 40px; // лучше задать в rem
+    left: 60px;
+  }
+  @include media-breakpoint-down(md) { // <= 768
+    top: 15px;
+    left: 35px;
+  }
+  @include media-breakpoint-down(sm) { // <= 576
+    top: 2px;
+    left: 4px;
+  }
+
+  &__competence-wrapper {
+    width: max-content;
+    background-color: $orangeColor;
+    padding: 0.5em;
+    @media (max-width: 500px) {
+      padding: 0 0.7em;
+    }
+  }
+
+  &__competence {
+    font-weight: bold;
+  }
+
+  &__header {
+    @include adaptiv-font(60, 15);
+    line-height: 0.8em;
+  }
+
+  &__description {
+    @media (max-width: 300px) {
+      display: none;
+    }
+  }
+
+  &__competence, &__description, &__header {
+    @include adaptiv-font(15, 12);
+    line-height: 1.3em;
+    @media (max-width: 500px) {
+      line-height: 0.8em;
+    }
+  }
+
+}
+
+.list-of-company-opportunities {
+  &__item {
+    &-img {
+      @include adaptiv-font(13, 10);
+      object-fit: contain;
+      width: 2em;
+      height: 2.3em;
+    }
+
+    &-description {
+      @include adaptiv-font(13, 10);
+      max-width: 10em;
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) { // <=1200
+}
+
+@include media-breakpoint-down(lg) { // <= 992
+}
+
+// Задавай значения в em, если свойства масштабируются относительно font-size;
+//Во всех остальных случаях задавай значения в rem.
+
+@include media-breakpoint-down(md) { // <= 768
+}
+
+// резиновая вёрстка
+@include media-breakpoint-down(sm) { // <= 576
 }
 
 /*
