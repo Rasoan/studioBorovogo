@@ -5,6 +5,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10750,25 +10751,31 @@ html {
   overflow: scroll;
 }
 
-@media (max-width: 767.98px) {
+.brand-information__description-logo {
+  font-size: 24px;
+  font-family: "Ubuntu";
+}
+@media (max-width: 1199.98px) and (max-width: 767.98px) {
   .brand-information__description-logo {
     font-size: calc(18px + 10.2 * ((100vw - 320px) / 1400));
   }
 }
-@media (min-width: 768px) {
+@media (max-width: 1199.98px) and (min-width: 768px) {
   .brand-information__description-logo {
     font-size: calc(18px + 6 * (100vw / 1400));
   }
 }
 .brand-information__description-name {
+  font-family: "Arial";
   line-height: 0.8;
+  font-size: 12px;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1199.98px) and (max-width: 767.98px) {
   .brand-information__description-name {
     font-size: calc(10px + 3.4 * ((100vw - 320px) / 1400));
   }
 }
-@media (min-width: 768px) {
+@media (max-width: 1199.98px) and (min-width: 768px) {
   .brand-information__description-name {
     font-size: calc(10px + 2 * (100vw / 1400));
   }
@@ -10777,12 +10784,16 @@ html {
 .my-search {
   width: max-content;
 }
-@media (max-width: 767.98px) {
+.my-search__input {
+  font-family: "Arial";
+  font-size: 16px;
+}
+@media (max-width: 1199.98px) and (max-width: 767.98px) {
   .my-search__input {
     font-size: calc(12px + 6.8 * ((100vw - 320px) / 1400));
   }
 }
-@media (min-width: 768px) {
+@media (max-width: 1199.98px) and (min-width: 768px) {
   .my-search__input {
     font-size: calc(12px + 4 * (100vw / 1400));
   }
@@ -10795,13 +10806,14 @@ html {
 }
 .my-search__button-icon {
   opacity: 0.9;
+  font-size: 16px;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1199.98px) and (max-width: 767.98px) {
   .my-search__button-icon {
     font-size: calc(14px + 3.4 * ((100vw - 320px) / 1400));
   }
 }
-@media (min-width: 768px) {
+@media (max-width: 1199.98px) and (min-width: 768px) {
   .my-search__button-icon {
     font-size: calc(14px + 2 * (100vw / 1400));
   }
@@ -10821,13 +10833,14 @@ html {
 }
 .my-search__icon {
   color: #f29700;
+  font-size: 16px;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1199.98px) and (max-width: 767.98px) {
   .my-search__icon {
     font-size: calc(10px + 10.2 * ((100vw - 320px) / 1400));
   }
 }
-@media (min-width: 768px) {
+@media (max-width: 1199.98px) and (min-width: 768px) {
   .my-search__icon {
     font-size: calc(10px + 6 * (100vw / 1400));
   }
@@ -10851,15 +10864,17 @@ html {
 }
 
 .my-navbar__item-link {
+  font-family: "Arial";
   font-weight: bold;
   color: black;
+  font-size: 16px;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1199.98px) and (max-width: 767.98px) {
   .my-navbar__item-link {
     font-size: calc(12px + 6.8 * ((100vw - 320px) / 1400));
   }
 }
-@media (min-width: 768px) {
+@media (max-width: 1199.98px) and (min-width: 768px) {
   .my-navbar__item-link {
     font-size: calc(12px + 4 * (100vw / 1400));
   }
@@ -10904,31 +10919,35 @@ html {
 }
 
 .about-company {
-  max-width: 500px;
+  max-width: 536px;
   height: min-content;
   top: 80px;
   left: 140px;
 }
 @media (max-width: 1199.98px) {
   .about-company {
+    max-width: 470px;
     top: 60px;
     left: 110px;
   }
 }
 @media (max-width: 991.98px) {
   .about-company {
+    max-width: 384px;
     top: 40px;
-    left: 60px;
+    left: 96px;
   }
 }
 @media (max-width: 767.98px) {
   .about-company {
+    max-width: 288px;
     top: 15px;
-    left: 35px;
+    left: 80px;
   }
 }
 @media (max-width: 575.98px) {
   .about-company {
+    max-width: 290px;
     top: 2px;
     left: 4px;
   }
@@ -10936,44 +10955,59 @@ html {
 .about-company__competence-wrapper {
   width: max-content;
   background-color: #f29700;
-  padding: 0.5em;
+  padding: 5px;
+  margin-bottom: 10px;
 }
-@media (max-width: 500px) {
+@media (max-width: 767.98px) {
   .about-company__competence-wrapper {
-    padding: 0 0.7em;
+    margin-bottom: 2px;
+    padding: 2px;
+  }
+}
+@media (max-width: 575.98px) {
+  .about-company__competence-wrapper {
+    padding: 0 0.5rem;
   }
 }
 .about-company__competence {
+  font-family: "Roboto";
   font-weight: bold;
 }
 .about-company__header {
-  line-height: 0.8em;
+  font-family: "Roboto";
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 0.9em;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1199.98px) and (max-width: 767.98px) {
   .about-company__header {
     font-size: calc(15px + 76.5 * ((100vw - 320px) / 1400));
   }
 }
-@media (min-width: 768px) {
+@media (max-width: 1199.98px) and (min-width: 768px) {
   .about-company__header {
     font-size: calc(15px + 45 * (100vw / 1400));
   }
+}
+.about-company__description {
+  font-family: "Arial";
+  line-height: 1.2em;
 }
 @media (max-width: 300px) {
   .about-company__description {
     display: none;
   }
 }
-.about-company__competence, .about-company__description, .about-company__header {
-  line-height: 1.3em;
+.about-company__competence, .about-company__description {
+  font-size: 15px;
 }
-@media (max-width: 767.98px) {
-  .about-company__competence, .about-company__description, .about-company__header {
+@media (max-width: 1199.98px) and (max-width: 767.98px) {
+  .about-company__competence, .about-company__description {
     font-size: calc(12px + 5.1 * ((100vw - 320px) / 1400));
   }
 }
-@media (min-width: 768px) {
-  .about-company__competence, .about-company__description, .about-company__header {
+@media (max-width: 1199.98px) and (min-width: 768px) {
+  .about-company__competence, .about-company__description {
     font-size: calc(12px + 3 * (100vw / 1400));
   }
 }
@@ -10982,44 +11016,38 @@ html {
     line-height: 0.8em;
   }
 }
+@media (max-width: 500px) and (max-width: 767.98px) {
+  .about-company__competence, .about-company__description, .about-company__header {
+    font-size: calc(12px + 5.1 * ((100vw - 320px) / 1400));
+  }
+}
+@media (max-width: 500px) and (min-width: 768px) {
+  .about-company__competence, .about-company__description, .about-company__header {
+    font-size: calc(12px + 3 * (100vw / 1400));
+  }
+}
 
+.list-of-company-opportunities {
+  font-size: 13px;
+}
+@media (max-width: 1199.98px) and (max-width: 767.98px) {
+  .list-of-company-opportunities {
+    font-size: calc(10px + 5.1 * ((100vw - 320px) / 1400));
+  }
+}
+@media (max-width: 1199.98px) and (min-width: 768px) {
+  .list-of-company-opportunities {
+    font-size: calc(10px + 3 * (100vw / 1400));
+  }
+}
 .list-of-company-opportunities__item-img {
   object-fit: contain;
   width: 2em;
   height: 2.3em;
 }
-@media (max-width: 767.98px) {
-  .list-of-company-opportunities__item-img {
-    font-size: calc(10px + 5.1 * ((100vw - 320px) / 1400));
-  }
-}
-@media (min-width: 768px) {
-  .list-of-company-opportunities__item-img {
-    font-size: calc(10px + 3 * (100vw / 1400));
-  }
-}
 .list-of-company-opportunities__item-description {
+  font-family: "Arial";
   max-width: 10em;
 }
-@media (max-width: 767.98px) {
-  .list-of-company-opportunities__item-description {
-    font-size: calc(10px + 5.1 * ((100vw - 320px) / 1400));
-  }
-}
-@media (min-width: 768px) {
-  .list-of-company-opportunities__item-description {
-    font-size: calc(10px + 3 * (100vw / 1400));
-  }
-}
-
-/*
-X-Small None: <576px (резиновая верстка).
-Small sm: 576p-767x (фиксированная верстка).
-Medium md: 768p-991x (фиксированная верстка).
-Large lg: 992-1199px (фиксированная верстка).
-Extra large	xl: 1200-1399px (фиксированная верстка).
-Extra extra large xxl: >1400px (фиксированная верстка).
-- На экранах с шириной разрешения 576px и более рабочая область страницы имеет фиксированную ширину, по горизонтали выравнивается по центру экрана.
-  */
 
 /*# sourceMappingURL=style.css.map */

@@ -1,23 +1,6 @@
 @import "node_modules/bootstrap/scss/bootstrap";
-
-$orangeColor: #f29700;
-$blueColor: #3c4148;
-$darkColor: #0e65b7;
-$whiteColor: white;
-$blackColor: black;
-$maxWidthNumber: 1400; // максимальная ширина макета
-$minWidthNumber: 320; // минимальная фиксировання ширина макета, дальше резина
-
-@mixin adaptiv-font($pcSize, $mobSize) {
-  $addSize: $pcSize - $mobSize;
-  $addMobSize: $addSize + $addSize * 0.7;
-  @include media-breakpoint-down(md) {
-    font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - #{$minWidthNumber + px}) / #{$maxWidthNumber}));
-  }
-  @include media-breakpoint-up(md) {
-    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidthNumber}));
-  }
-}
+@import "fonts.scss";
+@import "constants.scss";
 
 html {
   overflow: scroll;
@@ -26,12 +9,20 @@ html {
 .brand-information {
   &__description {
     &-logo {
-      @include adaptiv-font(24, 18);
+      font-size: 24px;
+      font-family: $ubuntuFont;
+      @include media-breakpoint-down(xl) { // <=1200
+        @include adaptiv-font(24, 18);
+      }
     }
 
     &-name {
-      @include adaptiv-font(12, 10);
+      font-family: $arialFont;
       line-height: 0.8;
+      font-size: 12px;
+      @include media-breakpoint-down(xl) { // <=1200
+        @include adaptiv-font(12, 10);
+      }
     }
   }
 }
@@ -40,7 +31,11 @@ html {
   width: max-content;
 
   &__input {
-    @include adaptiv-font(16, 12);
+    font-family: $arialFont;
+    font-size: 16px;
+    @include media-breakpoint-down(xl) { // <=1200
+      @include adaptiv-font(16, 12);
+    }
     @include media-breakpoint-down(sm) { // <= 576
       max-width: 18em;
       max-height: 3em;
@@ -50,7 +45,10 @@ html {
   &__button {
     &-icon {
       opacity: 0.9;
-      @include adaptiv-font(16, 14);
+      font-size: 16px;
+      @include media-breakpoint-down(xl) { // <=1200
+        @include adaptiv-font(16, 14);
+      }
       @include media-breakpoint-down(sm) { // <= 576
         max-width: 1em;
         max-height: 1em;
@@ -69,7 +67,10 @@ html {
 
   &__icon {
     color: $orangeColor;
-    @include adaptiv-font(16, 10);
+    font-size: 16px;
+    @include media-breakpoint-down(xl) { // <=1200
+      @include adaptiv-font(16, 10);
+    }
     @include media-breakpoint-down(sm) { // <= 576
       max-width: 0.8em;
       max-height: 0.8em;
@@ -93,9 +94,13 @@ html {
 .my-navbar {
   &__item {
     &-link {
+      font-family: $arialFont;
       font-weight: bold;
       color: $blackColor;
-      @include adaptiv-font(16, 12);
+      font-size: 16px;
+      @include media-breakpoint-down(xl) { // <=1200
+        @include adaptiv-font(16, 12);
+      }
 
       &:hover {
         background-color: $orangeColor;
@@ -132,23 +137,27 @@ html {
 }
 
 .about-company {
-  max-width: 500px;
+  max-width: 536px;
   height: min-content;
   top: 80px;
   left: 140px;
   @include media-breakpoint-down(xl) { // <=1200
+    max-width: 470px;
     top: 60px;
     left: 110px;
   }
   @include media-breakpoint-down(lg) { // <= 992
+    max-width: 384px;
     top: 40px; // лучше задать в rem
-    left: 60px;
+    left: 96px;
   }
   @include media-breakpoint-down(md) { // <= 768
+    max-width: 288px;
     top: 15px;
-    left: 35px;
+    left: 80px;
   }
   @include media-breakpoint-down(sm) { // <= 576
+    max-width: 290px;
     top: 2px;
     left: 4px;
   }
@@ -156,31 +165,50 @@ html {
   &__competence-wrapper {
     width: max-content;
     background-color: $orangeColor;
-    padding: 0.5em;
-    @media (max-width: 500px) {
-      padding: 0 0.7em;
+    padding: 5px;
+    margin-bottom: 10px;
+    @include media-breakpoint-down(md) { // <= 768
+      margin-bottom: 2px;
+      padding: 2px;
+    }
+    @include media-breakpoint-down(sm) { // <= 576
+      padding: 0 0.5rem;
     }
   }
 
   &__competence {
+    font-family: $robotoFont;
     font-weight: bold;
   }
 
   &__header {
-    @include adaptiv-font(60, 15);
-    line-height: 0.8em;
+    font-family: $robotoFont;
+    font-size: 60px;
+    @include media-breakpoint-down(xl) { // <=1200
+      @include adaptiv-font(60, 15);
+    }
+    font-weight: bold;
+    line-height: 0.9em;
   }
 
   &__description {
+    font-family: $arialFont;
+    line-height: 1.2em;
     @media (max-width: 300px) {
       display: none;
     }
   }
 
+  &__competence, &__description {
+    font-size: 15px;
+    @include media-breakpoint-down(xl) { // <=1200
+      @include adaptiv-font(15, 12);
+    }
+  }
+
   &__competence, &__description, &__header {
-    @include adaptiv-font(15, 12);
-    line-height: 1.3em;
     @media (max-width: 500px) {
+      @include adaptiv-font(15, 12);
       line-height: 0.8em;
     }
   }
@@ -188,44 +216,22 @@ html {
 }
 
 .list-of-company-opportunities {
+  font-size: 13px;
+  @include media-breakpoint-down(xl) { // <=1200
+    @include adaptiv-font(13, 10);
+  }
+
   &__item {
     &-img {
-      @include adaptiv-font(13, 10);
       object-fit: contain;
       width: 2em;
       height: 2.3em;
     }
 
     &-description {
-      @include adaptiv-font(13, 10);
+      font-family: $arialFont;
       max-width: 10em;
     }
   }
 }
-
-@include media-breakpoint-down(xl) { // <=1200
-}
-
-@include media-breakpoint-down(lg) { // <= 992
-}
-
-// Задавай значения в em, если свойства масштабируются относительно font-size;
-//Во всех остальных случаях задавай значения в rem.
-
-@include media-breakpoint-down(md) { // <= 768
-}
-
-// резиновая вёрстка
-@include media-breakpoint-down(sm) { // <= 576
-}
-
-/*
-X-Small None: <576px (резиновая верстка).
-Small sm: 576p-767x (фиксированная верстка).
-Medium md: 768p-991x (фиксированная верстка).
-Large lg: 992-1199px (фиксированная верстка).
-Extra large	xl: 1200-1399px (фиксированная верстка).
-Extra extra large xxl: >1400px (фиксированная верстка).
-- На экранах с шириной разрешения 576px и более рабочая область страницы имеет фиксированную ширину, по горизонтали выравнивается по центру экрана.
-  */
 

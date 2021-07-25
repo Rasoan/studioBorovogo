@@ -1,0 +1,18 @@
+$orangeColor: #f29700;
+$blueColor: #3c4148;
+$darkColor: #0e65b7;
+$whiteColor: white;
+$blackColor: black;
+$maxWidthNumber: 1400; // максимальная ширина макета
+$minWidthNumber: 320; // минимальная фиксировання ширина макета, дальше резина
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+  @include media-breakpoint-down(md) {
+    font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - #{$minWidthNumber + px}) / #{$maxWidthNumber}));
+  }
+  @include media-breakpoint-up(md) {
+    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidthNumber}));
+  }
+}
